@@ -6,7 +6,7 @@ set_optimize("fastest")
 target("pysl")
     set_kind("shared")
     add_files("src/*.cpp")
-    add_cxflags("$(shell python -m pybind11 --includes)")
+    add_cxflags("$(shell pixi run python -m pybind11 --includes)")
     after_build(
         function(target)
             local targetfile = target:targetfile()
