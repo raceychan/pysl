@@ -9,3 +9,4 @@ platforms = ["linux-64"]
 [tasks]
 
 [dependencies]
+pybind11 = ">=2.11.1,<2.12"
