@@ -1,6 +1,6 @@
 [
 {
-  "directory": "/home/raceychan/myproject/cppproject/cpypy",
-  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fPIC", "-O3", "-std=c++11", "-I/home/raceychan/myproject/cppproject/cpypy/.pixi/envs/default/include/python3.12", "-I/home/raceychan/myproject/cppproject/cpypy/.pixi/envs/default/lib/python3.12/site-packages/pybind11/include", "-DNDEBUG", "-o", "build/.objs/pysl/linux/x86_64/release/src/pysl.cpp.o", "src/pysl.cpp"],
+  "directory": "/home/raceychan/myproject/cppproject/pysl",
+  "arguments": ["/usr/bin/gcc", "-c", "-m64", "-fPIC", "-O3", "-std=c++20", "-I/home/raceychan/myproject/cppproject/pysl/.pixi/envs/default/include/python3.12", "-I/home/raceychan/myproject/cppproject/pysl/.pixi/envs/default/lib/python3.12/site-packages/pybind11/include", "-DNDEBUG", "-o", "build/.objs/pysl/linux/x86_64/release/src/pysl.cpp.o", "src/pysl.cpp"],
   "file": "src/pysl.cpp"
 }]

@@ -1,6 +1,7 @@
+
 add_rules("mode.debug", "mode.release")
 
-set_languages("cxx11")
+set_languages("cxx20")
 set_optimize("fastest")
 
 target("pysl")
@@ -10,6 +11,10 @@ target("pysl")
     after_build(
         function(target)
             local targetfile = target:targetfile()
-            os.cp(targetfile, path.join("./src", path.filename(targetfile):sub(4)))
+            local src =  os.getenv("PWD") .. "/src" 
+            local new_file = path.join(src, path.filename(targetfile):sub(4))
+            os.cp(targetfile,  new_file)
         end
     )
+    
+

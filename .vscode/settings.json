@@ -1,0 +1,7 @@
+{
+    "clangd.fallbackFlags": [
+        "-xc",
+        "-std=c++20",
+        "-I${workspaceFolder}/.pixi/envs/default/include",
+    ],
+}
