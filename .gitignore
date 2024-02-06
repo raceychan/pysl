@@ -8,3 +8,4 @@ build/
 # pixi environments
 .pixi
 .env
+*/.cache
