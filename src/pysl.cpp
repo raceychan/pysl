@@ -1,4 +1,4 @@
-#include <iostream>
+// #include <iostream>
 #include <pybind11/pybind11.h>
 #include <string>
 #include <utility>
@@ -10,9 +10,11 @@ auto add(int i, int j) -> int {
 }
 
 struct Pet {
+private:
     std::string name;
 
-    Pet(std::string name) :
+public:
+    explicit Pet(std::string name) :
         name(std::move(name)) {
     }
     void set_name(const std::string &name_) {
@@ -22,11 +24,6 @@ struct Pet {
         return name;
     }
 };
-
-auto main() -> int {
-    std::cout << "run" << '\n';
-    return 0;
-}
 
 PYBIND11_MODULE(pysl, m) {
     m.doc() = "pybind11 example plugin"; // optional module docstring
