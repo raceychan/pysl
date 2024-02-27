@@ -1,17 +1,26 @@
 #include "pysl.hpp"
-#include <pybind11/pybind11.h>
 
-namespace py = pybind11;
+namespace pysl {
+vector<string> split(const string &s, const string &delimiter) {
+    vector<string> res;
+    size_t pos = 0;
+    size_t gap = delimiter.size();
+    string token;
 
-using std::string, std::declval, std::ostream, std::cout, std::size_t;
+    while (pos < s.length()) {
+        size_t found = s.find(delimiter, pos);
 
-auto add(const int &i, const int &j) -> int {
-    return i + j;
+        if (found != string::npos) {
+            token = s.substr(pos, found - pos);
+            res.push_back(token);
+            pos = found + gap;
+        } else {
+            token = s.substr(pos);
+            res.push_back(token);
+            break;
+        }
+    }
+    return res;
 }
 
-// =========================================
-PYBIND11_MODULE(pysl, m) {
-    m.doc() = "python standard lib implemented in c++"; // optional module docstring
-    m.def("add", &add, "A function which adds two numbers");
-    m.def("print", &pysl::print, "A function which prints a number");
-}
+}; // namespace pysl

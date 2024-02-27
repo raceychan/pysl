@@ -1,8 +1,12 @@
+#pragma once
+
 #include <iostream>
+#include <string>
 #include <vector>
 
 namespace pysl {
-using std::cout;
+using std::cout, std::string, std::vector;
+vector<string> split(const string &s, const string &delimiter);
 
 template <typename T>
 std::ostream &operator<<(std::ostream &os, const std::vector<T> &vec) {
