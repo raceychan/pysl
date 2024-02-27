@@ -8,6 +8,8 @@
       "-fPIC",
       "-O3",
       "-std=c++20",
+      "-I",
+      "/home/raceychan/.xmake/packages/g/gtest/1.12.1/77b9096bc4b34d9282f672d36b015ba9/include",
       "-I/home/raceychan/myproject/cppproject/pysl/.pixi/envs/default/include/python3.12",
       "-I/home/raceychan/myproject/cppproject/pysl/.pixi/envs/default/lib/python3.12/site-packages/pybind11/include",
       "-DNDEBUG",

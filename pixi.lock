@@ -20,8 +20,10 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libuuid-2.38.1-h0b41bf4_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libxcrypt-4.4.36-hd590300_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libzlib-1.2.13-hd590300_5.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/mypy-1.8.0-py312h98912ed_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ncurses-6.4-h59595ed_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/openssl-3.2.1-hd590300_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/psutil-5.9.8-py312h98912ed_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pybind11-2.11.1-py312h8572e83_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pybind11-global-2.11.1-py312h8572e83_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/python-3.12.1-hab00c5b_1_cpython.conda
@@ -29,6 +31,8 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/readline-8.2-h8228510_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/tk-8.6.13-noxft_h4845f30_101.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/xz-5.2.6-h166bdaf_0.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/noarch/mypy_extensions-1.0.0-pyha770c72_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/noarch/typing_extensions-4.9.0-pyha770c72_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/tzdata-2024a-h0c530f3_0.conda
 packages:
 - kind: conda
@@ -252,6 +256,40 @@ packages:
   size: 61588
   timestamp: 1686575217516
 - kind: conda
+  name: mypy
+  version: 1.8.0
+  build: py312h98912ed_0
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/mypy-1.8.0-py312h98912ed_0.conda
+  sha256: 7c81ce75a70c44e198ba679a2235a9dc40cbeca90bb008aab65d4579ccc33e02
+  md5: fc225016708138b1895e09511ca7adcc
+  depends:
+  - libgcc-ng >=12
+  - mypy_extensions >=1.0.0
+  - psutil >=4.0
+  - python >=3.12,<3.13.0a0
+  - python_abi 3.12.* *_cp312
+  - typing_extensions >=4.1.0
+  license: MIT
+  license_family: MIT
+  size: 16309020
+  timestamp: 1703185079635
+- kind: conda
+  name: mypy_extensions
+  version: 1.0.0
+  build: pyha770c72_0
+  subdir: noarch
+  noarch: python
+  url: https://conda.anaconda.org/conda-forge/noarch/mypy_extensions-1.0.0-pyha770c72_0.conda
+  sha256: f240217476e148e825420c6bc3a0c0efb08c0718b7042fae960400c02af858a3
+  md5: 4eccaeba205f0aed9ac3a9ea58568ca3
+  depends:
+  - python >=3.5
+  license: MIT
+  license_family: MIT
+  size: 10492
+  timestamp: 1675543414256
+- kind: conda
   name: ncurses
   version: '6.4'
   build: h59595ed_2
@@ -282,6 +320,22 @@ packages:
   license_family: Apache
   size: 2863069
   timestamp: 1706635653339
+- kind: conda
+  name: psutil
+  version: 5.9.8
+  build: py312h98912ed_0
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/psutil-5.9.8-py312h98912ed_0.conda
+  sha256: 27e7f8f5d30c74439f39d61e21ac14c0cd03b5d55f7bf9f946fb619016f73c61
+  md5: 3facaca6cc0f7988df3250efccd32da3
+  depends:
+  - libgcc-ng >=12
+  - python >=3.12,<3.13.0a0
+  - python_abi 3.12.* *_cp312
+  license: BSD-3-Clause
+  license_family: BSD
+  size: 486243
+  timestamp: 1705722547420
 - kind: conda
   name: pybind11
   version: 2.11.1
@@ -401,6 +455,21 @@ packages:
   license_family: BSD
   size: 3318875
   timestamp: 1699202167581
+- kind: conda
+  name: typing_extensions
+  version: 4.9.0
+  build: pyha770c72_0
+  subdir: noarch
+  noarch: python
+  url: https://conda.anaconda.org/conda-forge/noarch/typing_extensions-4.9.0-pyha770c72_0.conda
+  sha256: f3c5be8673bfd905c4665efcb27fa50192f24f84fa8eff2f19cba5d09753d905
+  md5: a92a6440c3fe7052d63244f3aba2a4a7
+  depends:
+  - python >=3.8
+  license: PSF-2.0
+  license_family: PSF
+  size: 36058
+  timestamp: 1702176292645
 - kind: conda
   name: tzdata
   version: 2024a
